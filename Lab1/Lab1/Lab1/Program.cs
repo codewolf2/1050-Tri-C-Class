@@ -17,10 +17,9 @@
             double totalHeightCM;
 
             #region Part1
-            //getting the name section
-            System.Console.WriteLine();
+            //getting the name section    
             System.Console.Write("What is your first name?");
-            System.Console.WriteLine();
+            System.Console.WriteLine(); //fun little extra line for aesthetics
             firstName = System.Console.ReadLine();
 
             System.Console.Write("What is your middle initial?");
@@ -43,13 +42,14 @@
             //getting the height section
             System.Console.WriteLine();
             const double multiplier = 2.54;
-            const int inchesInFoot = 12;
+            const int inchesInFoot = 12; 
+            // above are just some constants to use later on instead of the numbers themselves
 
-            System.Console.Write("How tall are you rounding down to the nearest foot?");
+            System.Console.Write("How tall are you in feet while rounding down to the whole number?");
             System.Console.WriteLine();
             heightFeet = int.Parse(System.Console.ReadLine());
 
-            System.Console.Write("How many inches over the nearest foot are you?");
+            System.Console.Write("How many inches over that nearest foot are you?");
             System.Console.WriteLine();
 
             heightInches = int.Parse(System.Console.ReadLine());
@@ -61,19 +61,21 @@
             System.Threading.Thread.Sleep(5000);
             #endregion
 
-            #region vote stuff
+            #region Part3
             // learning if the user can vote
             System.Console.WriteLine();
-            System.Console.Write("What is your age?");
+            System.Console.Write("How many years old are you?");
             System.Console.WriteLine();
             age = int.Parse(System.Console.ReadLine());
 
-            System.Console.Write("Are you a citizen of the USA? please answer as either 'true' or 'false'");
+            System.Console.Write("Are you a citizen of the United States?");
+            System.Console.WriteLine();
+            System.Console.Write("Please answer as either 'true' or 'false'.");
             System.Console.WriteLine();
             isCitizen = bool.Parse(System.Console.ReadLine());
 
             canVote = age > 17 && isCitizen;
-            System.Console.Write("You being able to vote is " + canVote);
+            System.Console.Write("The fact that you are able to vote is " + canVote);
             System.Console.WriteLine();
 
             System.Threading.Thread.Sleep(5000);
